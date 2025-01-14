@@ -156,10 +156,6 @@ git difftool
 ```sh
 git ls-files | xargs wc -l
 ```
-## Show postgresql version
-https://blog.sleeplessbeastie.eu/2014/04/04/how-to-remotely-check-postgresql-version/
-
-
 
 
 
