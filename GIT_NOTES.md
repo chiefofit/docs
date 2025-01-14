@@ -137,6 +137,11 @@ git tag 0.1.0
 git push origin master --tags
 ```
 
+## Push a specific tag
+```sh
+git push origin 0.1.0
+```
+
 
 ##  Delete a tag
 ```sh
