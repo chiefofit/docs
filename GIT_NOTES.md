@@ -53,21 +53,23 @@ make the original experimental branch even with the master by merging the master
 
 ### Set remote url
 
+```
 git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
+```
 
 
 ### See the changelog based on commits
 
+```
 git log --oneline --decorate --color
+```
 
 
 ### set a Global gitignore
 
+```
 git config --global core.excludesfile ~/.gitignore_global
-
-
-## Git cheat sheet links
- - https://sentheon.com/blog/git-cheat-sheet.html
+```
 
 
 ### Show history of file
