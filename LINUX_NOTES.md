@@ -285,7 +285,7 @@ ssh wick@web01.jwick.clh.no 'echo $PATH'
 ## generate keystore
 
 ```
-keytool -genkey -v -keystore ivanceras.keystore -alias ivanceras -keyalg RSA -keysize 2048 -validity 10000
+keytool -genkey -v -keystore jwick.keystore -alias jwick -keyalg RSA -keysize 2048 -validity 10000
 ```
 
 ## Creating a debian executable package .deb
@@ -761,7 +761,7 @@ ssh wick@web01.jwick.clh.no 'echo $PATH'
 ## generate keystore
 
 ```
-keytool -genkey -v -keystore ivanceras.keystore -alias ivanceras -keyalg RSA -keysize 2048 -validity 10000
+keytool -genkey -v -keystore jwick.keystore -alias jwick -keyalg RSA -keysize 2048 -validity 10000
 ```
 
 ## Creating a debian executable package .deb
