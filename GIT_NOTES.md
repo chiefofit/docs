@@ -312,4 +312,12 @@ copy the contents of `cat ~/.ssh/id_rsa.pub` into github ssh settings
 https://www.conventionalcommits.org/en/v1.0.0/
 
 ## show the changes that has just been staged
+```
 git diff --cached
+```
+
+
+## Amend the last commit message
+```
+git commit --amend -m "fix: this will change the last commit message"
+```
