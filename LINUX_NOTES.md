@@ -1,3 +1,11 @@
+## Preface
+The following notes are command lines with options selected for common tasks in linux system.
+For more in-depth knowledge on each linux commands, it would be beneficial to dig further on each of these tools.
+A good start would be invoking the `-h` or `--help` options to know more about a linux command.
+
+For brevity, we use a theoritical user named `John Wick`, with usernames and credential files derived from his name and relevant skills.
+
+
 ## Screen capturing the desktop
 
 ```sh
@@ -357,10 +365,10 @@ oathtool --totp -b BBZYNASDLJJH6Z5O
 
 ## Recovering encrypted home folder in ubuntu
 ```sh
-sudo ecryptfs-recover-private /media/ubuntu/<disk-uuid>/.ecryptfs/lee/.Private
+sudo ecryptfs-recover-private /media/ubuntu/<disk-uuid>/.ecryptfs/wick/.Private
 
-sudo ecryptfs-recover-private /media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/lee/.Private
-INFO: Found [/media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/lee/.Private].
+sudo ecryptfs-recover-private /media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/wick/.Private
+INFO: Found [/media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/wick/.Private].
 Try to recover this directory? [Y/n]: y
 INFO: Found your wrapped-passphrase
 Do you know your LOGIN passphrase? [Y/n] y
@@ -847,10 +855,10 @@ oathtool --totp -b BBZYNASDLJJH6Z5O
 
 ## Recovering encrypted home folder in ubuntu
 ```sh
-sudo ecryptfs-recover-private /media/ubuntu/<disk-uuid>/.ecryptfs/lee/.Private
+sudo ecryptfs-recover-private /media/ubuntu/<disk-uuid>/.ecryptfs/wick/.Private
 
-sudo ecryptfs-recover-private /media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/lee/.Private
-INFO: Found [/media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/lee/.Private].
+sudo ecryptfs-recover-private /media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/wick/.Private
+INFO: Found [/media/ubuntu/f8c802c7-a920-4c47-9678-1a8d0be0e721/.ecryptfs/wick/.Private].
 Try to recover this directory? [Y/n]: y
 INFO: Found your wrapped-passphrase
 Do you know your LOGIN passphrase? [Y/n] y
