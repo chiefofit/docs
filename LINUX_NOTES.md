@@ -26,11 +26,6 @@ git difftool
 ```sh
 git ls-files | xargs wc -l
 ```
-## Show postgresql version
-https://blog.sleeplessbeastie.eu/2014/04/04/how-to-remotely-check-postgresql-version/
-
-
-
 
 
 
@@ -292,6 +287,7 @@ keytool -genkey -v -keystore jwick.keystore -alias jwick -keyalg RSA -keysize 20
 Once you have a binary, simply follow the debian packaging guide.
 The first thing to do is to check if you depend on any C libraries or try to run it on a clean install.
 Your directory tree should look like this:
+```
 helloworld
 ├── usr
 │    └── share
@@ -299,7 +295,10 @@ helloworld
 │                   └── your_binary
 └── DEBIAN
      └── control
+```
 The first thing is the control file, which is used for managing dependencies:
+
+```
 Package: helloworld
 Version: 0.0.1-0
 Section: misc
@@ -310,8 +309,12 @@ Installed-Size: 8
 Maintainer: Your Name <yourname@gmail.com>
 Homepage: www.yourhomepage.com
 Description: [DESCRIPTION]
-That's it. Then you can use dpkg -b ./helloworld helloworld.deb to package it.
-If you want a desktop entry, you need a logo in PNG format and a .desktop file. Your tree should now look like this:
+```
+
+That's it. Then you can use `dpkg -b ./helloworld helloworld.deb` to package it.
+If you want a desktop entry, you need a logo in PNG format and a `.desktop` file. Your tree should now look like this:
+
+```
 helloworld
 ├── usr
 │    └── share
@@ -323,7 +326,10 @@ helloworld
 │                   └── your_binary.desktop
 └── DEBIAN
      └── control
+```
+
 In the desktop file, you need to reference the icon.
+```
 [Desktop Entry]
 Name=Hello World
 Name[­de­]=Hallo Welt
@@ -338,6 +344,7 @@ StartupNotify=false
 Watch out for spaces. I took this tutorial from here, however the site is in German. You can google the individual strings to find out what they do.
 Then you can give your friend the .deb file. Usually Ubuntu has a graphical installer where you can just hit "install". You can sign it and publish it, but that is beyond my knowledge of how to do.
 The application will be installed on his computer under /usr/share/your_binary_folder. Make sure the name doesn't conflict with anything and that the Exec entry is correct.
+```
 
 ### Rsyncing files
 
