@@ -1163,7 +1163,7 @@ VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json ./launcher
 
 ## Installing nvidia driver in newly installed ubuntu
 - Download the driver from nvidia site using the firefox browser that goes with ubuntu.
-- edit /etc/default/grub file and comment out the config that says TIMEOUT to allow the grub bootloader menu show before booting into ubuntu
+- edit `/etc/default/grub` file and comment out the config that says TIMEOUT to allow the grub bootloader menu show before booting into ubuntu
 - Then choose the recovery option in the bootloader.
 - Drop to root shell.
     - remove the previously installed nvidia drivers using `sudo apt-get remove --purge '^nvidia-.*'`
