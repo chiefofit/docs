@@ -216,17 +216,17 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 ```
 
 ### Allowed <type>:
-build:
-ci:
-chore: maintenance
-docs: documentations
-feat: a commit of the type feat introduces a new feature to the codebase, correlates with the MINOR in semver
-fix: a commit of the type fix patches a bug in your codebase, correlates with PATCH in semver
-perf: performance improvements
-refactor: When renaming, moving modules around
-revert:
-style: formatting, missing semi colons, ...
-test: when adding missing tests
+- build:
+- ci:
+- chore: maintenance
+- docs: documentations
+- feat: a commit of the type feat introduces a new feature to the codebase, correlates with the MINOR in semver
+- fix: a commit of the type fix patches a bug in your codebase, correlates with PATCH in semver
+- perf: performance improvements
+- refactor: When renaming, moving modules around
+- revert:
+- style: formatting, missing semi colons, ...
+- test: when adding missing tests
 
 ### Allowed <scope>
 
