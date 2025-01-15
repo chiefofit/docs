@@ -62,6 +62,8 @@ git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
 
 ```
 git log --oneline --decorate --color
+git log --oneline
+git log --pretty=oneline
 ```
 
 
