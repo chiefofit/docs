@@ -104,7 +104,7 @@ sudo rm /var/cache/apt/archives/lock
 
 ## Login to ssh using pem files
 ```sh
-ssh -i sentiment.pem root@54.555.555.555
+ssh -i cred.pem root@54.555.555.555
 ```
 
 ## Monitor temperature sensors in linux
