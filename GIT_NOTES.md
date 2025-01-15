@@ -17,9 +17,11 @@ git push -u --force origin master
 
 ```
 
-
+## Configure git parameters for name and email
+```
 git config user.name "John Wick"
 git config user.email "jwick@continental.io"
+```
 
 
 ## To the experimental branch
