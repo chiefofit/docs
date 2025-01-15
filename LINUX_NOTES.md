@@ -94,7 +94,7 @@ objdump -TC target/release/libstringtools.so
 
 
 
-## Ubuntu 16 remove locks
+## Remove locks in debian base distro (ubuntu, debian, pop)
 ```
 #!/bin/sh
 sudo rm /var/lib/dpkg/lock
@@ -119,23 +119,6 @@ sensors
 ```sh
 sudo apt install hddtemp
 
-
-## Screen capturing the desktop
-
-```sh
-sudo apt-get install byzanz
-```
-
-Install ScreenRuler/Kruler as well
-
-Record using
-```sh
-byzanz-record --duration=30 --x=2 --y=50 --width=1095 --height=595 out.gif
-byzanz-record --duration=15 --x=2 --y=50 --width=1095 --height=595 out.gif
-```
-
-put the window to the top of the OS toolbar, this is 50px including the window of the terminal
-put a margin of around 2px from the side
 
 ## git compare file changes
 ```sh
@@ -150,107 +133,6 @@ git ls-files | xargs wc -l
 ```
 
 
-
-
-## Generating password in linux
-```sh
-openssl rand -base64 <length>
-```
-
-example:
-
-```sh
-openssl rand -base64 10
-XpNmDvixAx+o0Q==
-
-```
-
-
-```sh
-sudo apt-get install pwgen
-```
-
-```
-pwgen
-
-goh8Ahwe HiMooqu0 eelie1So Oheey5ig Igh7uo1a gieDieC9 ESeroh9I Iu9xeedu
-Xooghe9d zi2Ujaej xei1Ceec Pe4ahphi tah7eoHi ex0Exoh7 Yu3cee4g zieJoo5v
-iy1jaeSi biPovie9 Eeghai7d tei4Oori En7chae6 aiX1phai fuof4Sei We9Baime
-
-
-```
-
-
-
-## Find in files
-
-Search for the word `bazaar_v8` in all files ending in .rs
-
-```sh
-
-reset && grep -rnw ./**/*.rs -e "bazaar_v8"
-```
-
-Non-recursive, replace `bazaar_v6` with `bazaar_v8` in files ending in `.rs` in this directory only:
-
-```sh
-sed -i -- 's/bazaar_v6/bazaar_v8/g' *.rs
-
-```
-
-Search function call of `some_function`, and remove the second argument names None.
-```sh
-sed -i -- 's/some_function(\(.*\), None)/some_function(\1)/g' *.rs
-
-```
-
-# Inject the host IP into docker-compose.yml file
-```sh
-sed -i -e "s/host.docker.internal/$HOST_IP/g" docker-compose.yml
-```
-
-Recursively search replace
-```sh
-find . -type f -name "*.rs" -print0 | xargs -0 sed -i 's/foo/bar/g'
-```
-
-
-## Inspecting .so libraries in linux
-```sh
-nm -gC target/release/libstringtools.so | grep data
-readelf -Ws target/release/libstringtools.so
-objdump -TC target/release/libstringtools.so
-
-```
-
-
-
-## Ubuntu 16 remove locks
-```
-#!/bin/sh
-sudo rm /var/lib/dpkg/lock
-sudo rm /var/lib/apt/lists/lock
-sudo rm /var/cache/apt/archives/lock
-```
-
-## Login to ssh using pem files
-```sh
-ssh -i sentiment.pem root@54.555.555.555
-```
-
-## Monitor temperature sensors in linux
-```sh
-sudo apt install lm-sensors
-sudo sensors-detect
-sudo service kmod start
-sensors
-```
-
-## Monitor hdd temperature
-```sh
-sudo apt install hddtemp
-sudo hddtemp /dev/sda
-```
 
 ## kill matching process name (don't need to be exact match)
 ```sh
