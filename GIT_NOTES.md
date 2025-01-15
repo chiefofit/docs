@@ -19,7 +19,7 @@ git push -u --force origin master
 
 
 git config user.name "John Wick"
-git config user.email "jwick@continental.com"
+git config user.email "jwick@continental.io"
 
 
 ## To the experimental branch
@@ -54,7 +54,7 @@ make the original experimental branch even with the master by merging the master
 ### Set remote url
 
 ```
-git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
+git remote set-url origin https://github.com/jwick/target_mission.git
 ```
 
 
@@ -257,7 +257,7 @@ https://github.com/joelparkerhenderson/git_commit_message
 
     sec   rsa3082/16B6568258A225E6 2020-03-09 [SC] [expires: 2022-03-09]
           EEE9C3570C3CA78CD00D560B16B6568258A114E6
-    uid                 [ultimate] Jovansonlee Cesar <jwick@continental.com>
+    uid                 [ultimate] John Wick <jwick@continental.io>
     ssb   rsa3072/C345253BABCC600F 2020-03-09 [E] [expires: 2022-03-09]
     ```
 - To export the public key
