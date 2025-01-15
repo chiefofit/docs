@@ -305,6 +305,20 @@ git commit -m "Add design file"
 git push origin main
 ```
 
+
+## git compare file changes
+```sh
+git config diff.tool vimdiff
+git difftool
+```
+
+
+## Count the number of lines in git project
+```sh
+git ls-files | xargs wc -l
+```
+
+
 ## Error: git@github.com: Permission denied (publickey).  fatal: Could not read from remote repository.
 
 ```ssh

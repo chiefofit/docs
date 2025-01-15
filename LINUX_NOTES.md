@@ -20,22 +20,6 @@ byzanz-record --duration=30 --x=2 --y=50 --width=1095 --height=595 out.gif
 byzanz-record --duration=15 --x=2 --y=50 --width=1095 --height=595 out.gif
 ```
 
-put the window to the top of the OS toolbar, this is 50px including the window of the terminal
-put a margin of around 2px from the side
-
-## git compare file changes
-```sh
-git config diff.tool vimdiff
-git difftool
-```
-
-
-## Count the number of lines in git project
-```sh
-git ls-files | xargs wc -l
-```
-
-
 
 ## Generating password in linux
 ```sh
