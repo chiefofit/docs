@@ -60,25 +60,25 @@ iy1jaeSi biPovie9 Eeghai7d tei4Oori En7chae6 aiX1phai fuof4Sei We9Baime
 reset && grep -rnw ./**/*.rs -e "bazaar_v8"
 ```
 
-Non-recursive, replace `bazaar_v6` with `bazaar_v8` in files ending in `.rs` in this directory only:
+### Non-recursive, replace `bazaar_v6` with `bazaar_v8` in files ending in `.rs` in this directory only:
 
 ```sh
 sed -i -- 's/bazaar_v6/bazaar_v8/g' *.rs
 
 ```
 
-Search function call of `some_function`, and remove the second argument names None.
+### Search function call of `some_function`, and remove the second argument names None.
 ```sh
 sed -i -- 's/some_function(\(.*\), None)/some_function(\1)/g' *.rs
 
 ```
 
-# Inject the host IP into docker-compose.yml file
+### Inject the host IP into docker-compose.yml file
 ```sh
 sed -i -e "s/host.docker.internal/$HOST_IP/g" docker-compose.yml
 ```
 
-Recursively search replace
+### Recursively search replace
 ```sh
 find . -type f -name "*.rs" -print0 | xargs -0 sed -i 's/foo/bar/g'
 ```
@@ -118,23 +118,11 @@ sensors
 ## Monitor hdd temperature
 ```sh
 sudo apt install hddtemp
-
-
-## git compare file changes
-```sh
-git config diff.tool vimdiff
-git difftool
 ```
-
-
-## Count the number of lines in git project
-```sh
-git ls-files | xargs wc -l
-```
-
 
 
 ## kill matching process name (don't need to be exact match)
+
 ```sh
 pkill <process name>
 pkill diwata
@@ -144,7 +132,7 @@ pkill chrome
 ## Execute a command to a remote machine via ssh
 ```
 ssh user@host '<command>'
-ssh wick@web01.jwick.clh.no 'echo $PATH'
+ssh wick@web01.jwick.continental.io 'echo $PATH'
 ```
 
 ## generate keystore
@@ -219,7 +207,7 @@ The application will be installed on his computer under /usr/share/your_binary_f
 ### Rsyncing files
 
 ```sh
-rsync -avzhP curtain root@45.55.7.231:~/
+rsync -avzhP src/folder root@45.55.7.231:~/
 ```
 
 ## Using authenticator via the command-line
