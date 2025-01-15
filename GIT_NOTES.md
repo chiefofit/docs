@@ -244,6 +244,7 @@ https://bitbucket.org/BitPusher16/dotfiles/raw/49a01d929dcaebcca68bbb1859b4ac1ae
 ## How to write git commit messages
 https://github.com/joelparkerhenderson/git_commit_message
 
+# Signing of git commits
 
 ## Add gpg verified commits in github
 
