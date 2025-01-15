@@ -1,7 +1,7 @@
 ## Preface
-The following notes are command lines with options selected for common tasks in linux system.
+The following notes are command lines with options selected for common tasks in a linux system.
 For more in-depth knowledge on each linux commands, it would be beneficial to dig further on each of these tools.
-A good start would be invoking the `-h` or `--help` options to know more about a linux command.
+A good start would be invoking the `-h` / `--help` or the `man` pages for each of these tools.
 
 For brevity, we use a theoritical user named `John Wick`, with usernames and credential files derived from his name and relevant skills.
 
@@ -53,7 +53,7 @@ iy1jaeSi biPovie9 Eeghai7d tei4Oori En7chae6 aiX1phai fuof4Sei We9Baime
 
 ## Find in files
 
-Search for the word `bazaar_v8` in all files ending in .rs
+### Search for the word `bazaar_v8` in all files ending in .rs
 
 ```sh
 
