@@ -345,3 +345,9 @@ git diff --cached
 ```
 git commit --amend -m "fix: this will change the last commit message"
 ```
+
+## Generating changelog from the commit history
+```
+cargo install convco
+convco changelog > Changelog.md
+```
