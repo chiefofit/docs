@@ -6,6 +6,20 @@ A good start would be invoking the `-h` / `--help` or the `man` pages for each o
 For brevity, we use a theoritical user named `John Wick`, with usernames and credential files derived from his name and relevant skills.
 
 
+## Determine your linux version
+```
+uname -a
+
+Linux jwick-Bravo-15-C7VE 6.8.0-51-generic #52-Ubuntu SMP PREEMPT_DYNAMIC Thu Dec  5 13:09:44 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+## Determine your distro version
+```
+lsb_release -a
+cat /etc/os-release
+```
+
+
 ## Screen capturing the desktop
 
 ```sh
