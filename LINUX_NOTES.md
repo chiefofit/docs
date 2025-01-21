@@ -352,17 +352,17 @@ git reset --hard HEAD
 
 ## Using letsencrypt to generate an ssl certificate for a domain name we own
 Example, if we own the
-domain name: some-domain.xyz, some-other-domain.xyz
+domain name: `continental.io`, continental.io
 using email: wick@sub.hush.com
 
 Install certbot: sudo apt install certbot
 ```
-$> sudo certbot certonly --manual --preferred-challenges=dns --email wick@sub.hush.com --agree-tos -d some-domain.xyz
+$> sudo certbot certonly --manual --preferred-challenges=dns --email wick@sub.hush.com --agree-tos -d continental.io
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator manual, Installer None
 Obtaining a new certificate
 Performing the following challenges:
-dns-01 challenge for some-domain.xyz
+dns-01 challenge for continental.io
 
 -------------------------------------------------------------------------------
 NOTE: The IP of this machine will be publicly logged as having requested this
@@ -375,7 +375,7 @@ Are the OK with your IP being logged?
 
 -------------------------------------------------------------------------------
 Please deploy a DNS TXT record under the name
-_acme-challenge.some-domain.xyz with the following value:
+_acme-challenge.continental.io with the following value:
 
 b8ZXF0f4yVZxvxfXLjYWCnpEOidBU1LjnxPpGqMiT11
 
@@ -387,9 +387,9 @@ Cleaning up challenges
 
 IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/some-domain.xyz/fullchain.pem
+   /etc/letsencrypt/live/continental.io/fullchain.pem
    Your key file has been saved at:
-   /etc/letsencrypt/live/some-domain.xyz/privkey.pem
+   /etc/letsencrypt/live/continental.io/privkey.pem
    Your cert will expire on 2019-11-01. To obtain a new or tweaked
    version of this certificate in the future, simply run certbot
    again. To non-interactively renew *all* of your certificates, run
@@ -402,25 +402,25 @@ IMPORTANT NOTES:
 
 ## Checking if the txt record has propagated
 ```sh
-nslookup -type=TXT _acme-challenge.some-domain.xyz
+nslookup -type=TXT _acme-challenge.continental.io
 ```
 ## Or by using google api
 ```
-curl "https://dns.google.com/resolve?name=_acme-challenge.some-domain.xyz&type=TXT"
+curl "https://dns.google.com/resolve?name=_acme-challenge.continental.io&type=TXT"
 ```
 
 Using the certificates to be serve in rust webserver with rust-tls
 ```sh
-cargo run --example tlsserver -- --port 8443 --certs ~/some-domain.xyz/cert1.pem --key ~/some-domain.xyz/privkey1.pem http
+cargo run --example tlsserver -- --port 8443 --certs ~/continental.io/cert1.pem --key ~/continental.io/privkey1.pem http
 # to use only protocol version 1.3
-cargo run --example tlsserver -- --port 8443 --certs ~/some-domain.xyz/cert1.pem --key ~/some-domain.xyz/privkey1.pem --auth /etc/ssl/certs/ca-certificates.crt --protover 1.3 http
-$>rustls/rustls-mio/target/debug/examples$ sudo ./tlsserver --port 443 --certs ~/some-domain.xyz/cert1.pem --key ~/some-domain.xyz/privkey1.pem echo
+cargo run --example tlsserver -- --port 8443 --certs ~/continental.io/cert1.pem --key ~/continental.io/privkey1.pem --auth /etc/ssl/certs/ca-certificates.crt --protover 1.3 http
+$>rustls/rustls-mio/target/debug/examples$ sudo ./tlsserver --port 443 --certs ~/continental.io/cert1.pem --key ~/continental.io/privkey1.pem echo
 ```
 
 Add an entry to /etc/hosts/
-127.0.0.1	some-domain.xyz
+127.0.0.1	continental.io
 
-Then you can open the browser to https://some-domain.xyz
+Then you can open the browser to https://continental.io
 
 
 ## Encrypting a file hello.txt into hello.enc and decrypting hello.enc to hello.decr
