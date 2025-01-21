@@ -36,6 +36,10 @@
         - Employee - Merchant ONLY
 - [Junket](https://www.figma.com/design/TOgWdUnEbnjlNo5WtYSdF9/Junket?node-id=0-1&p=f&t=l4vXZwBoUxOrDbzN-0)
     - Page 1
+- [B-Wallet-ui](https://www.figma.com/design/JjTbbYb7uhbBv33zxZT3O7/B-wallet-UI?node-id=0-1&p=f&t=MRQMFowryWTSJsgr-0)
+    - Final
+
+- [House balance](https://www.figma.com/design/NPfzZGZRz2bsfEbDr5b2T7/Cage-System-UI?node-id=919-73214&t=qKPSI9z1ixGEtrke-0)
 
 ### Utility tools
 - [totoro](https://github.com/jcesar-betrnk/totoro) - A totp/2fa management tool in the CLI, alternative to google authenticator.
